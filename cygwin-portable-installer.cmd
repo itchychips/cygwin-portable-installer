@@ -43,7 +43,7 @@ set CYGWIN_ARCH=auto
 set CYGWIN_USERNAME=root
 
 :: select the packages to be installed automatically via apt-cyg
-set CYGWIN_PACKAGES=bash-completion,bc,bzip,coreutils,curl,dos2unix,expect,git,git-svn,gnupg,inetutils,jq,lz4,mc,nc,openssh,openssl,perl,psmisc,python37,pv,rsync,ssh-pageant,screen,subversion,unzip,vim,wget,zip,zstd
+set CYGWIN_PACKAGES=bash-completion,bc,bzip,coreutils,curl,dos2unix,expect,git,gnupg,inetutils,jq,lz4,nc,openssh,openssl,perl,psmisc,python37,pv,tmux,unzip,vim,wget,zip,zstd
 
 :: if set to 'yes' the local package cache created by cygwin setup will be deleted after installation/update
 set DELETE_CYGWIN_PACKAGE_CACHE=no
@@ -74,7 +74,7 @@ set INSTALL_TESTSSL_SH=no
 set TESTSSL_GIT_BRANCH=3.0
 
 :: use ConEmu based tabbed terminal instead of Mintty based single window terminal, see https://conemu.github.io/
-set INSTALL_CONEMU=yes
+set INSTALL_CONEMU=no
 set CON_EMU_OPTIONS=-Title cygwin-portable ^
  -QuitOnClose
 
