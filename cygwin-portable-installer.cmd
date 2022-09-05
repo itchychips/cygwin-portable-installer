@@ -40,7 +40,7 @@ set CYGWIN_MIRROR=https://linux.rz.ruhr-uni-bochum.de/download/cygwin
 set CYGWIN_ARCH=auto
 
 :: choose a user name under Cygwin
-set CYGWIN_USERNAME=root
+set CYGWIN_USERNAME=%username%
 
 :: select the packages to be installed automatically via apt-cyg
 set CYGWIN_PACKAGES=bash-completion,bc,bzip,coreutils,curl,dos2unix,expect,git,gnupg,inetutils,jq,lz4,nc,openssh,openssl,perl,psmisc,python37,pv,tmux,unzip,vim,wget,zip,zstd
@@ -52,7 +52,7 @@ set DELETE_CYGWIN_PACKAGE_CACHE=no
 set INSTALL_APT_CYG=yes
 
 :: if set to 'yes' the bash-funk adaptive Bash prompt (https://github.com/vegardit/bash-funk) will be installed automatically
-set INSTALL_BASH_FUNK=yes
+set INSTALL_BASH_FUNK=no
 
 :: if set to 'yes' Node.js (https://nodejs.org/) will be installed automatically
 set INSTALL_NODEJS=no
@@ -91,19 +91,19 @@ set MINTTY_OPTIONS=--Title cygwin-portable ^
   -o Rows=50 ^
   -o BellType=0 ^
   -o ClicksPlaceCursor=yes ^
-  -o CursorBlinks=yes ^
-  -o CursorColour=96,96,255 ^
+  -o CursorBlinks=no ^
   -o CursorType=Block ^
   -o CopyOnSelect=yes ^
   -o RightClickAction=Paste ^
-  -o Font="Courier New" ^
-  -o FontHeight=10 ^
-  -o FontSmoothing=None ^
+  -o Font="Lucida Console" ^
+  -o FontHeight=9 ^
+  -o FontSmoothing=Default ^
   -o ScrollbackLines=10000 ^
   -o Transparency=off ^
   -o Term=xterm-256color ^
   -o Charset=UTF-8 ^
   -o Locale=C
+::  -o CursorColour=96,96,255 ^
 
 :: ============================================================================================================
 :: CONFIG CUSTOMIZATION END
@@ -711,7 +711,7 @@ echo.
 
 :: adding "|| exit /B 0" to prevent "ERROR: Input redirection is not supported, exiting the process immediately."
 :: when installer is executed non-interactive
-timeout /T 60 || exit /B 0
+::timeout /T 60 || exit /B 0
 exit /B 0
 
 :fail
